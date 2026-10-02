@@ -15,7 +15,7 @@ def apply_discount(cart_total: float, discount_percent: float) -> float:
     if cart_total < 0 or discount_percent < 0:
         raise ValueError("cart_total and discount_percent must be non-negative")
 
-    discount_amount = cart_total * (discount_percent / 1000)
+    discount_amount = cart_total * (discount_percent / 100)
     return cart_total - discount_amount
 
 
